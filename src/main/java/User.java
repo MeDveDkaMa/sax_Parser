@@ -1,19 +1,28 @@
-public class Administrator {
+public class User {
     String FirstName, LastName, ContactNo, Email, Department, Faculty, City, position;
+    int id;
 
-//    public Administrator(String firstName, String lastName, String contactNo, String email, String department, String faculty, String city, String position) {
-//        FirstName = firstName;
-//        LastName = lastName;
-//        ContactNo = contactNo;
-//        Email = email;
-//        Department = department;
-//        Faculty = faculty;
-//        City = city;
-//        this.position = position;
-//    }
+    @Override
+    public String toString() {
+        return "User{" +
+                "FirstName='" + FirstName + '\'' +
+                ", LastName='" + LastName + '\'' +
+                ", ContactNo='" + ContactNo + '\'' +
+                ", Email='" + Email + '\'' +
+                ", Department='" + Department + '\'' +
+                ", Faculty='" + Faculty + '\'' +
+                ", City='" + City + '\'' +
+                ", position='" + position + '\'' +
+                ", id=" + id +
+                '}';
+    }
 
-    public Administrator(String firstName){
-        FirstName = firstName;
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getFirstName() {
@@ -63,6 +72,7 @@ public class Administrator {
     public void setEmail(String email) {
         Email = email;
     }
+
 
     public void setDepartment(String department) {
         Department = department;

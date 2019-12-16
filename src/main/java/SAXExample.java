@@ -14,11 +14,9 @@ public class SAXExample {
         XmlHandler handler = new XmlHandler();
         saxParser.parse(new File("/home/alexander/IdeaProjects/Dom_Parser/src/main/resources/university.xml"),handler);
 
-        List<Administrator> administrators = XmlHandler.getAdministrator();
-        for(Administrator emp : administrators) {
-//            System.out.println(emp.getFirstName());
-//            System.out.println(emp.getLastName());
-            System.out.println(emp.getFirstName());
+        List<User> users = XmlHandler.getUser();
+        for(User emp : users) {
+            System.out.println(emp);
         }
     }
 }
