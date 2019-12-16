@@ -24,16 +24,9 @@ public class XmlHandler extends DefaultHandler {
     boolean bPosition = false;
 
 
-
     @Override
     public void startDocument() throws SAXException {
         System.out.println("Start parsing:\n" + "============");
-    }
-
-    @Override
-    public void endDocument() throws SAXException {
-        System.out.println("End parsing:\n" + "============");
-
     }
 
     @Override
@@ -81,7 +74,6 @@ public class XmlHandler extends DefaultHandler {
         }
         data = new StringBuffer();
     }
-
 
     @Override
     public void endElement(String uri, String localName, String qName) throws SAXException {
@@ -132,6 +124,5 @@ public class XmlHandler extends DefaultHandler {
     public void characters(char[] ch, int start, int length) throws SAXException {
        data.append(new String(ch,start,length));
     }
-
 
 }
