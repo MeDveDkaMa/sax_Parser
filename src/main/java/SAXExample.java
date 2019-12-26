@@ -6,6 +6,7 @@ import javax.xml.parsers.SAXParserFactory;
 import java.io.File;
 import java.io.IOException;
 import java.util.List;
+import java.util.logging.Logger;
 
 public class SAXExample {
     public static void main(String[] args) throws ParserConfigurationException, SAXException, IOException {

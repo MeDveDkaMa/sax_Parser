@@ -2,9 +2,11 @@ import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;
 import org.xml.sax.helpers.DefaultHandler;
 import java.util.ArrayList;
+import java.util.logging.Logger;
 
 public class XmlHandler extends DefaultHandler {
 
+    private static final Logger log = Logger.getLogger(String.valueOf(XmlHandler.class));
     private static ArrayList<User> user = new ArrayList<>();
     private StringBuffer data;
     User User;
@@ -80,10 +82,13 @@ public class XmlHandler extends DefaultHandler {
         if (bid){
             User.setId(Integer.parseInt(String.valueOf(data)));
             bid = false;
+            log.info("ID: " + data);
         }
         if (bFname){
             User.setFirstName(data.toString());
             bFname = false;
+            log.info("Name: " + data);
+
         }
         if (bContact){
             User.setContactNo(data.toString());
