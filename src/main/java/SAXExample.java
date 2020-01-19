@@ -12,7 +12,7 @@ public class SAXExample {
         SAXParserFactory factory = SAXParserFactory.newInstance();
         SAXParser saxParser = factory.newSAXParser();
         XmlHandler handler = new XmlHandler();
-        saxParser.parse(new File("/home/alexander/IdeaProjects/Sax_Parser/src/main/resources/university.xml"),handler);
+        saxParser.parse(new File("./src/main/resources/university.xml"),handler);
 
         List<User> users = XmlHandler.getUser();
         for(User emp : users) {

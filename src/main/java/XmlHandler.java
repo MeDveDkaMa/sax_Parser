@@ -35,43 +35,43 @@ public class XmlHandler extends DefaultHandler {
     @Override
     public void startElement(String uri, String localName, String qName, Attributes attributes) throws SAXException {
 
-        if (qName.equalsIgnoreCase("administration") || qName.equalsIgnoreCase("student"))
+        if (qName.equalsIgnoreCase("sas:administration") || qName.equalsIgnoreCase("sas:student"))
         {
             User = new User();
         }
-        if (qName.equalsIgnoreCase("id"))
+        if (qName.equalsIgnoreCase("sas:id"))
         {
             bid = true;
         }
-        if (qName.equalsIgnoreCase("FirstName"))
+        if (qName.equalsIgnoreCase("sas:FirstName"))
         {
             bFname = true;
         }
-        if (qName.equalsIgnoreCase("LastName"))
+        if (qName.equalsIgnoreCase("sas:LastName"))
         {
             bLname = true;
         }
-        if (qName.equalsIgnoreCase("ContactNo"))
+        if (qName.equalsIgnoreCase("sas:ContactNo"))
         {
             bContact = true;
         }
-        if (qName.equalsIgnoreCase("Email"))
+        if (qName.equalsIgnoreCase("sas:Email"))
         {
             bEmail = true;
         }
-        if (qName.equalsIgnoreCase("Department"))
+        if (qName.equalsIgnoreCase("sas:Department"))
         {
             bDepartment = true;
         }
-        if (qName.equalsIgnoreCase("Faculty"))
+        if (qName.equalsIgnoreCase("sas:Faculty"))
         {
             bFaculty = true;
         }
-        if (qName.equalsIgnoreCase("City"))
+        if (qName.equalsIgnoreCase("sas:City"))
         {
             bCity = true;
         }
-        if (qName.equalsIgnoreCase("position"))
+        if (qName.equalsIgnoreCase("sas:position"))
         {
             bPosition = true;
         }
@@ -120,7 +120,7 @@ public class XmlHandler extends DefaultHandler {
             bLname = false;
         }
 
-        if (qName.equalsIgnoreCase("administration") || qName.equalsIgnoreCase("student"))
+        if (qName.equalsIgnoreCase("sas:administration") || qName.equalsIgnoreCase("sas:student"))
         {
             user.add(User);
         }
